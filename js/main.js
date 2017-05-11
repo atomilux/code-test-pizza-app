@@ -119,6 +119,18 @@ function build_ingredientHTML(obj, top_list) {
 
 }//end f
 
+//when hasOwnProperty and $.inArray fail at 11:34pm ...
+function tool_isInArray(item,arr) {
+
+	for(x=0;x<arr.length;x++) {
+		if (arr[x] == item) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
 
 /* ------------------------------
 
