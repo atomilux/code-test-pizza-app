@@ -55,8 +55,7 @@ $(document).on("click",".ingredient",function(e) {
 	//scope to <input>
 	var input = $(e.target);
 
-	//get id
-	//var id =
+	//get key
 	var id = $(input).text();//spaced text
 
 	//global scope the topping id
@@ -79,9 +78,7 @@ $(document).on("click",".ingredient",function(e) {
 
 function build_ingredientHTML(obj, top_list) {
 
-	console.log('build_ingredientHTML');
-
-	//scope to <label>
+	//scope to DOM obj
 	var fieldHTML = $(fieldInputTemplate);
 
 	//loop through ingredients and build our fieldset
@@ -118,22 +115,9 @@ function build_ingredientHTML(obj, top_list) {
 			ui_toppingActivator(top_name_id,true);
 		}
 
-
-
 	}//end for
 
 }//end f
-
-//when hasOwnProperty and $.inArray fail at 11:34pm ...
-function tool_isInArray(item,arr) {
-
-	for(x=0;x<arr.length;x++) {
-		if (arr[x] == item) {
-			return true;
-		}
-	}
-	return false;
-}
 
 
 /* ------------------------------
@@ -173,28 +157,13 @@ function ui_styleInputWaiting(id,mode) {
 
 function ui_toppingActivator(top,show) {
 
+	//in case we get a lazy use
 	if (show == undefined || show == null) {
 		show = false;
 	}
 
+	//Space Free is the way to be
 	top = top.replace(/\s/g, '');
-
-	//array('Pepperoni','Sausage','Canadian Bacon','Olives','Onions','BellPepper','Shrooms');
-
-	/*
-
-	 <div id="message">YOU WILL GET LE SAUCE, NO LE EXCEPTIONS</div>
-	 <div id="pizza_img_canadianBacon" class="pizza_topping"><img src="images/canadianBacon.png"/></div>
-	 <div id="pizza_img_greenPeppers" class="pizza_topping"><img src="images/greenPeppers.png"/></div>
-	 <div id="pizza_img_olives" class="pizza_topping"><img src="images/olives.png"/></div>
-	 <div id="pizza_img_onions" class="pizza_topping"><img src="images/onions.png"/></div>
-	 <div id="pizza_img_pepperoni" class="pizza_topping"><img src="images/pepperoni.png"/></div>
-	 <div id="pizza_img_sausage" class="pizza_topping"><img src="images/sausage.png"/></div>
-	 <div id="pizza_img_shrooms" class="pizza_topping"><img src="images/shrooms.png"/></div>
-	 <div id="pizza_img_base" class="pizza_base"><img src="images/pizza.png"/></div>
-
-	 */
-
 
 	switch (top) {
 
@@ -320,7 +289,7 @@ function ajax_addTopping(top) {
 			ajax_toppingWaiting = "";
 		}
 	});
-}
+}//end f
 
 function ajax_dropTopping(top) {
 	$.ajax({
@@ -366,7 +335,7 @@ function ajax_dropTopping(top) {
 			ajax_toppingWaiting = "";
 		}
 	});
-}
+}//end f
 
 function ajax_getToppings() {
 	$.ajax({
@@ -399,7 +368,7 @@ function ajax_getToppings() {
 			showError(api_error_msg);
 		}
 	});
-}
+}//end f
 
 function showMsg(msg) {
 
@@ -416,6 +385,7 @@ function showMsg(msg) {
 	snark[9] = "You are not Le French. Shhhh. It's Le OK";
 	snark[10] = "Le Drol.";
 
+	//get random snark if needed
 	if (msg == undefined || msg == '') {
 		var num = Math.floor(Math.random() * snark.length);
 		var msg = snark[num];
@@ -424,15 +394,9 @@ function showMsg(msg) {
 	//set msg
 	$("#message").text(msg);
 
-}
+}//end f
 
 function showError(message) {
-
 	alert("Steve...wth!...FIX THIS: " + message);
 	showMsg("MON DIEU! Le Steve needs to Le Fix Me");
 }
-
-/*
-function reportError(message,type) {
-
-}*/
