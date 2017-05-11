@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>LE FAUX PIZZA</title>
+
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/main_styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<!-- main container -->
+		<div id="content">
+
+			<!-- header -->
+			<div id="header">Le Faux Pizza</div>
+
+			<!-- ui toppings -->
+			<div id="toppings"></div>
+
+			<!-- ui pizza -->
+			<div id="pizza">
+				<div id="pizza_shell">
+					<div id="message">YOU WILL GET LE SAUCE, NO LE EXCEPTIONS</div>
+					<div id="pizza_img_canadianBacon" class="pizza_topping hidden"><img src="images/canadianBacon.png"/></div>
+					<div id="pizza_img_greenPeppers" class="pizza_topping hidden"><img src="images/greenPeppers.png"/></div>
+					<div id="pizza_img_olives" class="pizza_topping hidden"><img src="images/olives.png"/></div>
+					<div id="pizza_img_onions" class="pizza_topping hidden"><img src="images/onions.png"/></div>
+					<div id="pizza_img_pepperoni" class="pizza_topping hidden"><img src="images/pepperoni.png"/></div>
+					<div id="pizza_img_sausage" class="pizza_topping hidden"><img src="images/sausage.png"/></div>
+					<div id="pizza_img_shrooms" class="pizza_topping hidden"><img src="images/shrooms.png"/></div>
+					<div id="pizza_img_base" class="pizza_base"><img src="images/pizza.png"/></div>
+				</div>
+				<div class="clearMe"></div>
+			</div>
+
+			<!-- ui footer -->
+			<div id="footer">
+				<p>
+				Le Faux Pizza is not a real pizza company. Le Faux Pizza intentionally emulates stereotypical French
+				waitstaff afflicted with: superiority complex, impatience, intolerance and overall rudeness. Le Faux Pizza
+				intentionally belittles its developer. Le Faux Pizza is not to be confused with Pappa Johns pizza ... which
+				provides unquestionably great pizza and unquestionably useful cached imagery. Le Faux Pizza's condescension,
+				compulsive insultery, disdain and overall lack of cooth is intentional for levitous and entertainment purposes.
+				</p>
+			</div>
+		</div>
+
+		<!-- ui audio -->
+		<audio id="ui_audio_click" src="audio/click_04_01.mp3"/>
+
+		<!-- template HTML - copied to memory then removed from DOM -->
+		<div id="templates">
+
+			<div id="template_ingredientDiv" data-added="no" class="ingredient input_plain">Ingredient</div>
+		</div>
+
+	</body>
+</html>
+
+

@@ -1,0 +1,259 @@
+/* --------------------------
+		 GLOBALS
+-------------------------- */
+
+body {
+	font-family: 'Unica One', cursive;
+	color:white;
+	background:black;
+	padding:3% 4% 0 4%;
+}
+
+
+/* -------- main containers ---------- */
+
+#header {
+	font-size:10vw;
+	text-align:center;
+	padding-bottom:2%;
+	border-bottom: 1px solid #ccc;
+	margin-bottom:4%;
+}
+
+#pizza {
+	display:block;
+	width:100%;
+}
+
+
+#toppings {
+	padding: 0 0 0 2%;
+	text-align:center;
+}
+
+#message {
+	font-size: 2vw;
+	text-align: center;
+	padding: 0 0 4% 0;
+}
+
+#footer {
+	clear: both;
+	border-top: 1px solid #ccc;
+	padding: 2% 0 0 0;
+	font-family:Verdana,sans-serif;
+}
+
+
+/* -------- ingredients ---------- */
+
+.ingredient {
+	cursor: pointer;
+	font-size:3vw;
+	padding: 0 3% 0 0;
+	display:inline-block;
+	transition: all .2s ease-in-out;
+}
+
+.ingredient:hover {
+	transform: scale(1.1);
+}
+
+.input_plain {
+	color:#fff;
+}
+
+.input_waiting {
+	color:#999;
+}
+
+.input_added {
+	color:#ff0000;
+}
+
+
+/* -------- pizza image containers ---------- */
+
+#pizza_shell {
+	position:relative;
+}
+
+#pizza img {
+	width:100%;
+}
+
+#pizza_img_base {
+	position:absolute;
+	z-index:1;
+	width:100%;
+}
+
+#pizza_img_shrooms {
+	position:absolute;
+	z-index:2;
+	width:100%;
+}
+
+#pizza_img_sausage {
+	position:absolute;
+	z-index:3;
+	width:100%;
+}
+
+#pizza_img_pepperoni {
+	position:absolute;
+	z-index:4;
+	width:100%;
+}
+
+#pizza_img_onions {
+	position:absolute;
+	z-index:5;
+	width:100%;
+}
+
+#pizza_img_olives {
+	position:absolute;
+	z-index:6;
+	width:100%;
+}
+
+#pizza_img_greenPeppers {
+	position:absolute;
+	z-index:7;
+	width:100%;
+}
+
+#pizza_img_canadianBacon {
+	position:absolute;
+	z-index:8;
+	width:100%;
+}
+
+
+/* -------- misc. ---------- */
+
+#templates {
+	display:none;
+}
+
+
+.visible {
+	display:block;
+}
+
+.hidden {
+	display:none;
+}
+
+
+.clearMe {
+	clear:both;
+	width:100%;
+}
+
+
+/* teeny tinay */
+@media only screen and (min-width: 400px) {
+	#toppings {
+		padding: 0 0 5% 0;
+		width:100%;
+	}
+
+	#pizza {
+		width:100%;
+		height:60vw;
+	}
+
+	#message {
+		font-size:3.5vw;
+		padding: 2% 0 2% 0;
+		border-top: 1px solid #ccc;
+	}
+
+	.ingredient {
+		font-size: 5vw;
+		padding: 0 4% 0 0;
+	}
+
+	#footer {
+		font-size:2.6vw;
+	}
+
+}
+
+/* Pads and larger phones */
+@media only screen and (min-width: 600px) {
+
+	#toppings {
+		width:30%;
+		float:right;
+		text-align:left;
+		font-size:5vw
+	}
+
+	#pizza {
+		width:60%;
+		float:left;
+		height:inherit;
+	}
+
+	#message {
+		border:none;
+		font-size:2.6vw;
+	}
+
+	.ingredient {
+		display:block;
+		padding: 0 4% 0 0;
+	}
+
+	#footer {
+		font-size:1.5vw;
+	}
+
+}
+
+
+/* Giganto */
+@media only screen and (min-width: 1300px) {
+
+	body {
+		margin: 0 auto;
+		max-width: 1400px;
+		padding:2%;
+	}
+
+	#header {
+		font-size:140px;
+	}
+
+	#toppings {
+		width:30%;
+		float:right;
+		text-align:left;
+
+	}
+
+	#pizza {
+		width:60%;
+		float:left;
+		height:inherit;
+	}
+
+	#message {
+		border:none;
+		font-size:40px;
+	}
+
+	.ingredient {
+		display:block;
+		padding: 0 4% 0 0;
+		font-size:65px;
+	}
+
+	#footer {
+		font-size:16px;
+	}
+
+}
